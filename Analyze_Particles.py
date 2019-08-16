@@ -72,7 +72,7 @@ for root, dirs, files in os.walk(in_dir):
 					IJ.run(zimp, "Analyze Particles...", "size=" + str(particle_size) + " circularity=" + str(particle_circ) + " show=Outlines display exclude summarize add")
 					zimp2 = zimp.flatten();
 					saveImage(zimp2, os.path.join(out_dir, out_name + ".tiff"))
-					drawing_name = "Drawing of " + str(zimp)
+					drawing_name = "Drawing of " + str(zimp).split('"')[1]
 					IJ.selectWindow(drawing_name)
 					IJ.saveAs("Tiff", os.path.join(out_dir, out_name + "_drawing.tiff"))
 					IJ.run("Close")
