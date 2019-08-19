@@ -67,7 +67,7 @@ for root, dirs, files in os.walk(in_dir):
 
 					'''
 					zimp = maxZprojection(imp)
-					IJ.run(zimp, "Auto Threshold", "method=Default white")
+					IJ.run(zimp, "Auto Threshold", "method=Default ignore_black white")
 					IJ.run(zimp, "Watershed", "")
 					IJ.run(zimp, "Analyze Particles...", "size=" + str(particle_size) + " circularity=" + str(particle_circ) + " show=Outlines display exclude summarize add")
 					zimp2 = zimp.flatten();
