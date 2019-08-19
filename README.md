@@ -5,7 +5,7 @@ This script runs particle analysis on nd2 files in one directory.
 * open nd2 file with split channels
 * for *TRITC* channel:
     * maximum intensity projection
-    * AutoThreshold (Method: Default)
+    * AutoThreshold (Method: Default, "ignore black")
     * Watershed
     * analyze particles
 * saves:
